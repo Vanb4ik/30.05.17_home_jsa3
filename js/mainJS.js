@@ -1,4 +1,5 @@
-
+var selectedItem=0;
+var spanText=0;
 var form = document.forms.notepad;
 var list = document.querySelector("#list");
 var add = document.getElementById("add");
@@ -28,8 +29,8 @@ list.addEventListener("click",function (e)
 });
 function targetLiEdit(param)
 {
-    var selectedItem = param;
-    var spanText = selectedItem.textContent;
+    selectedItem = param;
+    spanText= selectedItem.textContent;
     form.txt.value=spanText;
     add.innerText="Edit";
     form.addEventListener("submit", function (e)
